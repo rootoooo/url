@@ -2,12 +2,7 @@
 
 一个使用 Cloudflare Pages 创建的 URL 缩短器
 
-*Demo* : [https://d.131213.xyz/](https://d.131213.xyz/)
-
-
-
 ### 利用Cloudflare pages部署
-
 
 1. fork本项目
 2. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
@@ -43,31 +38,5 @@ CREATE TABLE IF NOT EXISTS logs (
 8. 选择部署完成short项目，前往后台依次点击`设置`->`函数`->`D1 数据库绑定`->`编辑绑定`->变量名称填写：`DB` 命名空间 `选择你提前创建好的D1` 数据库绑定
 
 9. 重新部署项目，完成。
-
-
-### API
-
-#### 短链生成
-
-```bash
-# POST /create
-curl -X POST -H "Content-Type: application/json" -d '{"url":"https://131213.xyz"}' https://d.131213.xyz/create
-
-# 指定slug
-curl -X POST -H "Content-Type: application/json" -d '{"url":"https://131213.xyz","slug":"scxs"}' https://d.131213.xyz/create
-
-```
-
-
-
-> response:
-
-```json
-{
-  "slug": "<slug>",
-  "link": "http://d.131213.xyz/<slug>"
-}
-```
-
 
 
