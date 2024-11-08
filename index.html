@@ -217,14 +217,25 @@
       <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">生成</button>
     </main>
     <footer>
-     初见少年拉满弓，不惧风雨逐长空。
-     东风轻拂英雄梦，岁月深藏少年心。
-     山一程来水一程，人生何处不相逢。
-     一别却无归期在，相见唯有梦里重。
-     花开花落皆有期，英雄迟暮美人迟。
-     风光霁月终如幻，最易错在人生里。
-     世事两难情常伴，得失浮沉随悲欢。
-     或许遗憾为常态，不完美亦是圆满。
+     少年初见弓如月，
+     不畏风霜志弥坚。
+     东风吹醒凌云志，
+     岁月磨平赤子心。
+
+     山重水复人易散，
+     此生何处再相逢。
+     一别竟无归期处，
+     梦中惟见旧时人。
+
+     花开有落空叹息，
+     英雄迟暮美人衰。
+     光阴似水如朝露，
+     最易错在流年里。
+
+     世路两难多悲喜，
+     浮沉荣枯总相依。
+     或叹遗恨常为理，
+     不全方得人生真。
     </footer>
     <script src="asset/js/alpine.js"></script>
     <script>
@@ -236,7 +247,7 @@
         isValidated () {
           return !/^https?:\/\/.{3,}/.test(this.url)
         },
-        submit ($refs, $nextTick) {
+        submit ($refs， $nextTick) {
           if (!this.url) {
             this.alert = { type: 'error', message: '缺少必需的参数：url。' }
             return
